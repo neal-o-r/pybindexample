@@ -15,10 +15,8 @@ PYBIND11_MODULE(pybindexample, m) {
         Some other explanation about the add function.
     )pbdoc");
 
-    m.def("subtract", [](int i, int j) { return i - j; }, R"pbdoc(
-        Subtract two numbers
-
-        Some other explanation about the subtract function.
+    m.def("random_matrix", &random_matrix, R"pbdoc(
+	Test Eigen functionality
     )pbdoc");
 
 #ifdef VERSION_INFO
