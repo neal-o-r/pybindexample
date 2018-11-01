@@ -24,9 +24,11 @@ class get_pybind_include(object):
 ext_modules = [
     Extension(
         'pybindexample',
-        ['src/main.cpp'],
+        ['pybindexample/main.cpp',
+         'cpp/src/add.cpp'],
         include_dirs=[
             # Path to pybind11 headers
+            'cpp/include',
             get_pybind_include(),
             get_pybind_include(user=True)
         ],
